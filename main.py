@@ -39,3 +39,13 @@ if card1.get_value() == 10:
     print("Passed value test")
 
 print(card3)#This should print the card from the __str__ method
+
+#Create all 52 unique cards, using the tuples ranks and suits with some for loops
+deck = []#Creates a list to store the cards
+for s in suits:
+    for r in ranks:
+        deck.append(Card(s,r)) #Creates a new card from suit and rank
+
+#Print the cards to see them
+for c in deck:
+    print(c)#c is a card in the deck, each time this loop repeats then it will call the __str__ method from the card class
